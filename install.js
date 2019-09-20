@@ -173,6 +173,7 @@ function getRequestOptions() {
 
   // Use certificate authority settings from npm
   var ca = process.env.npm_config_ca
+  console.log({ ca })
   if (!ca && process.env.npm_config_cafile) {
     try {
       ca = fs.readFileSync(process.env.npm_config_cafile, {encoding: 'utf8'})
